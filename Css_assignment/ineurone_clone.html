@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/1cf3f0d12c.js" crossorigin="anonymous"></script>
+    <style>
+        input::placeholder {
+
+            color: #233c7b;
+            font-size: 16px;
+        }
+
+        .inp_box {
+            width: 700px;
+            padding: 12px 12px 12px 48px;
+            border: 1px solid #233c7b;
+        }
+
+        .nav_div {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap:40px;
+            
+        }
+
+        .sign_in_btn {
+            background-color: #233c7b;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            width: 100px;
+            border: none;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        .sign_up_btn{
+
+            padding:8px;
+            width:100px;
+            background: transparent;
+            border:none;color:#233c7b;
+            font-size:15px;
+            font-weight:500;
+        }
+
+        .hamburder_img{
+
+            width:25px;
+            display: none;
+
+        }
+
+        .search_icon{
+            display:none;
+        }
+        @media screen and (max-width:1155px) {
+            .inp_box {
+                width: 700px;
+                padding: 12px 12px 12px 48px;
+                border: 1px solid #233c7b;
+                display: none;
+            }
+
+            .nav_div {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                
+            }
+
+            .sign_in_btn {
+                display: none;
+            }
+
+            .hamburder_img{
+
+                width:25px;
+                display: block;
+
+            }
+
+            .sign_up_btn{
+                display: none;
+            }
+
+            .search_icon{
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav_div">
+        <div style="width:30%"><img class="hamburder_img" src="./images/hamburger.svg" alt=""></div>
+        <div style="width:30%"><img style="width:170px" src="./images/ineuron-logo.png" alt="logo"></div>
+        <div style="color:#233c7b"><input class="inp_box" type="text" placeholder="What do you want to learn?"></div>
+        <div><button class="sign_up_btn">Sign Up</button></div>
+        <div><button class="sign_in_btn">Sign In</button></div>
+        <div ><i class="fa-solid fa-magnifying-glass fa-xl search_icon"></i></div>
+    </div>
+</body>
+
+</html>
