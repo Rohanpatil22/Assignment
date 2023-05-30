@@ -8,6 +8,15 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/1cf3f0d12c.js" crossorigin="anonymous"></script>
     <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+           
+        }
+/* 
+        body::-webkit-scrollbar{
+             display: none;
+        } */
+
         input::placeholder {
 
             color: #233c7b;
@@ -25,7 +34,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap:40px;
+            gap:50px;
             
         }
 
@@ -60,7 +69,46 @@
         .search_icon{
             display:none;
         }
-        @media screen and (max-width:1155px) {
+
+        .nav_bar_2{
+            margin-top:25px;
+            display: flex;
+            justify-content: center;
+            color: #233c7b;
+            align-items: center;
+            gap:50px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .main_img{
+
+            width:99vw;
+        }
+
+        .heading{
+
+            margin:auto;
+            width:50%;
+            color: #233c7b;
+            font-weight: bold;
+            font-size:35px;
+            padding-top:50px;
+            text-align: center;
+        }
+
+        .icons_div{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .company_logo{
+
+            width:200px
+        }
+        @media screen and (max-width:1020px) {
             .inp_box {
                 width: 700px;
                 padding: 12px 12px 12px 48px;
@@ -94,6 +142,24 @@
             .search_icon{
                 display: block;
             }
+
+            .nav_bar_2{
+                display: none;
+            }
+
+            .icons_div{
+                display: block;
+            }
+
+            .remove_flex{
+                display:block;
+                margin-top:50px;
+            }
+
+            .company_logo{
+
+            width:100px
+            }
         }
     </style>
 </head>
@@ -105,7 +171,61 @@
         <div style="color:#233c7b"><input class="inp_box" type="text" placeholder="What do you want to learn?"></div>
         <div><button class="sign_up_btn">Sign Up</button></div>
         <div><button class="sign_in_btn">Sign In</button></div>
-        <div ><i class="fa-solid fa-magnifying-glass fa-xl search_icon"></i></div>
+        <div ><img class="search_icon" style="width:20px" src="./images/magnifying-glass-solid.svg" alt=""></div>
+        
+    </div>
+    <div class="nav_bar_2">
+        <div>Cources</div>
+        <div>One Neuron</div>
+        <div>Neuro Lab</div>
+        <div>Job Portal</div>
+        <div>Internship Portal</div>
+        <div>Become an Affiliate</div>
+        <div>Hall Of fame</div>
+        <div>Company</div>
+    </div>
+
+    <div style="margin-top:25px;width:99vw">
+
+        <picture>
+            <source  media="(min-width: 1020px)"  srcset="./images/main_img.png"/>
+             <source  srcset="./images/maobile_main_img.png"/>
+             <img class="main_img" src="./images/main_img.png" alt="">
+        </picture>
+        
+    </div>
+
+    <div style="padding-bottom:100px">
+        <div class="heading">"Pure Hardwork, No Shotcuts!"</div>
+        <div style="width:10%;margin:auto;text-align: center;"><hr style="border:2px solid orange"></div>
+        <div class="icons_div">
+            <div class="remove_flex" style="text-align: center;">
+                <div><img style="width:150px" src="./images/books-icon.svg" alt=""></div>
+                <div style="color: #233c7b;font-weight: 600;font-size:30px">300+</div>
+                <div style="color:#454545;font-size: 20px;font-weight: 600;margin-top:20px">Different Courses</div>
+            </div>
+            <div class="remove_flex" style="text-align: center;">
+                <div><img style="width:150px" src="./images/student-iocn.svg" alt=""></div>
+                <div style="color: #233c7b;font-weight: 600;font-size:30px">4,00,000+</div>
+                <div style="color:#454545;font-size: 20px;font-weight: 600;margin-top:20px">Students Enrolled</div>
+            </div>
+            <div class="remove_flex" style="text-align: center;">
+                <div><img style="width:150px" src="./images/credit-card-icon.svg" alt=""></div>
+                <div style="color: #233c7b;font-weight: 600;font-size:30px">10,000+</div>
+                <div style="color:#454545;font-size: 20px;font-weight: 600;margin-top:20px">Successful Transition</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <div style="background-color: #eef0f5;">
+        <div class="heading" style="padding-top:60px">Our Achiever's work with</div>
+        <div style="display:flex;justify-content: center;align-items: center;gap:50px;margin-top:90px;padding-bottom:90px">
+            <div><img class="company_logo"  src="./images/tataiq.png" alt=""></div>
+            <div><img class="company_logo" src="./images/conduent.png" alt=""></div>
+            <div><img class="company_logo" src="./images/no-broker.png" alt=""></div>
+            <div><img class="company_logo" src="./images/ibm.png" alt=""></div>
+        </div>
     </div>
 </body>
 
