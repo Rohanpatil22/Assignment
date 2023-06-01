@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/1cf3f0d12c.js" crossorigin="anonymous"></script>
     <style>
         body{
@@ -35,6 +37,7 @@
             justify-content: center;
             align-items: center;
             gap:50px;
+            margin-top:20px
             
         }
 
@@ -108,6 +111,14 @@
 
             width:200px
         }
+
+        .search{
+            width:20px;
+            position:fixed;
+            left:29vw;
+            top:4vh;
+            display:none;
+        }
         @media screen and (max-width:1020px) {
             .inp_box {
                 width: 700px;
@@ -160,6 +171,13 @@
 
             width:100px
             }
+            
+        }
+
+        @media screen and (min-width:1430px){
+            .search{
+                display: block;
+            }
         }
     </style>
 </head>
@@ -168,10 +186,11 @@
     <div class="nav_div">
         <div style="width:30%"><img class="hamburder_img" src="./images/hamburger.svg" alt=""></div>
         <div style="width:30%"><img style="width:170px" src="./images/ineuron-logo.png" alt="logo"></div>
-        <div style="color:#233c7b"><input class="inp_box" type="text" placeholder="What do you want to learn?"></div>
+        <div style="color:#233c7b"><img class="search" src="./images/magnifying-glass-solid.svg" alt=""><input class="inp_box" type="text" placeholder="What do you want to learn?"></div>
         <div><button class="sign_up_btn">Sign Up</button></div>
         <div><button class="sign_in_btn">Sign In</button></div>
         <div ><img class="search_icon" style="width:20px" src="./images/magnifying-glass-solid.svg" alt=""></div>
+        
         
     </div>
     <div class="nav_bar_2">
@@ -185,13 +204,45 @@
         <div>Company</div>
     </div>
 
-    <div style="margin-top:25px;width:99vw">
+    <div style="margin-top:30px" >
 
-        <picture>
+        <!-- <picture>
             <source  media="(min-width: 1020px)"  srcset="./images/main_img.png"/>
              <source  srcset="./images/maobile_main_img.png"/>
              <img class="main_img" src="./images/main_img.png" alt="">
-        </picture>
+        </picture> -->
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <picture class="d-block">
+                    <source  media="(min-width: 1020px)"  srcset="./images/main_img.png"/>
+                    <source  srcset="./images/maobile_main_img.png"/>
+                    <img class="main_img" src="./images/main_img.png" alt="">
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture class="d-block">
+                    <source  media="(min-width: 1020px)"  srcset="./images/main_img_2.png"/>
+                    <source  srcset="./images/mobile_main_img_2.png"/>
+                    <img class="main_img" src="./images/main_img.png" alt="">
+                </picture>
+              </div>
+              <div class="carousel-item">
+                <picture class="d-block">
+                    <source  media="(min-width: 1020px)"  srcset="./images/main_img_3.png"/>
+                    <source  srcset="./images/mobile_main_img_3.png"/>
+                    <img class="main_img" src="./images/main_img.png" alt="">
+                </picture>
+              </div>
+            </div>
+            
+          </div>
         
     </div>
 
@@ -226,6 +277,69 @@
             <div><img class="company_logo" src="./images/no-broker.png" alt=""></div>
             <div><img class="company_logo" src="./images/ibm.png" alt=""></div>
         </div>
+    </div>
+
+    <div style="margin-top:50px;background-color: #fbfeff;">
+        <div style="text-align: center;width:30%;margin:auto;color: #233c7b;font-size:40px;font-weight: bold;">Live Program</div>
+        <div style="text-align: center;width:40%;margin:auto;color: #858585;font-size:20px;margin-top:5px">Get your program with live "intructor led" learning</div>
+        <div style="width:80%;margin:auto">
+            <!-- <div style="width:22%;padding:10px;border-radius: 15px;background-color: #eef0f5;">
+                <div><img  style="width:100%" src="./images/program_1.jpg" alt=""></div>
+                <div style="margin-top:10px;color: #233c7b;font-size:19px;font-weight:bold">Machine Learning Bootcamp</div>
+                <div style="margin-top:50px">Krish Naik</div>
+                <div style="display:flex;justify-content: space-between;align-items: center;margin:25px 0px 15px 0px">
+                    <div style="font-size: 17px;font-weight:bold"><span>&#8377;</span>6000.00</div>
+                    <div><button style="background-color: #a2cafa;border:1px solid #7199ff;color:#233c7b;border-radius:5px">Live</button></div>
+                </div>
+            </div> -->
+            
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="d-block" style="width:22%;padding:10px;border-radius: 15px;background-color: #eef0f5;">
+                        <div><img  style="width:100%" src="./images/program_1.jpg" alt=""></div>
+                        <div style="margin-top:10px;color: #233c7b;font-size:19px;font-weight:bold">Machine Learning Bootcamp</div>
+                        <div style="margin-top:50px">Krish Naik</div>
+                        <div style="display:flex;justify-content: space-between;align-items: center;margin:25px 0px 15px 0px">
+                            <div style="font-size: 17px;font-weight:bold"><span>&#8377;</span>6000.00</div>
+                            <div><button style="background-color: #a2cafa;border:1px solid #7199ff;color:#233c7b;border-radius:5px">Live</button></div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-block" style="width:22%;padding:10px;border-radius: 15px;background-color: #eef0f5;">
+                        <div><img  style="width:100%" src="./images/program_1.jpg" alt=""></div>
+                        <div style="margin-top:10px;color: #233c7b;font-size:19px;font-weight:bold">Machine Learning Bootcamp</div>
+                        <div style="margin-top:50px">Krish Naik</div>
+                        <div style="display:flex;justify-content: space-between;align-items: center;margin:25px 0px 15px 0px">
+                            <div style="font-size: 17px;font-weight:bold"><span>&#8377;</span>6000.00</div>
+                            <div><button style="background-color: #a2cafa;border:1px solid #7199ff;color:#233c7b;border-radius:5px">Live</button></div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="d-block" style="width:22%;padding:10px;border-radius: 15px;background-color: #eef0f5;">
+                        <div><img  style="width:100%" src="./images/program_1.jpg" alt=""></div>
+                        <div style="margin-top:10px;color: #233c7b;font-size:19px;font-weight:bold">Machine Learning Bootcamp</div>
+                        <div style="margin-top:50px">Krish Naik</div>
+                        <div style="display:flex;justify-content: space-between;align-items: center;margin:25px 0px 15px 0px">
+                            <div style="font-size: 17px;font-weight:bold"><span>&#8377;</span>6000.00</div>
+                            <div><button style="background-color: #a2cafa;border:1px solid #7199ff;color:#233c7b;border-radius:5px">Live</button></div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+        </div>
+
+        
     </div>
 </body>
 
