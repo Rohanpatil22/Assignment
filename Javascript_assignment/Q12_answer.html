@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./Q12_answer.js"></script>
 </head>
-<body>
+<body onload="get_data()" class="bg-stone-700 text-slate-100 text-right p-5">
+    <div>
+        <button onclick="show_div()" class="p-2 border-none rounded-xl w-28 bg-green-600 text-white font-bold text-lg">Create</button>
+        <!-- <button>Delete</button> -->
+    </div>
+    <div class="m-auto w-2/5 text-center mt-4 border-2 rounded-xl " id="create_blog" style="display:none">
+        <div class="text-right pr-5 pt-5"><button class="bg-red-600 text-white p-1 rounded w-16" onclick="show_div()">Close</button></div>
+        <div  class="text-center pl-28 pt-6">
+            <table>
+                <tr>
+                    <td class="p-3 text-left"><label for="user_id">User Id</label></td>
+                    <td><input class="bg-zinc-800" type="text" id="user_id"></td>
+                </tr>
     
+                <tr>
+                    <td class="p-3 text-left"><label for="blog_title">Blog Title</label></td>
+                    <td><input class="bg-zinc-800" type="text" id="blog_title"/></td>
+                </tr>
+            
+                <tr>
+                    <td class="p-3 text-left"><label for="blog_body">Blog Body</label></td>
+                    <td><input class="bg-zinc-800" type="text" id="blog_body"/></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="p-3"><button class="bg-emerald-600 p-1 w-20 rounded-xl" onclick="add_blog()">Add</button></td>
+                </tr>
+            </table>
+            
+        </div>
+
+    </div>
+
+    <div id="blog_div" class="grid gap-10 grid-cols-4 text-left mt-10 pl-2 w-full"></div>
 </body>
 </html>
