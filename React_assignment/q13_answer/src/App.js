@@ -1,5 +1,5 @@
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 function App() {
 
@@ -28,6 +28,10 @@ function App() {
     setResult(0);
    }
   
+   useEffect(()=>{
+    getResult();
+   },[userInp])
+
    const getResult=()=>{
     let lastInp=userInp.charAt(userInp.length-1);
     if(!operations.includes(lastInp))
