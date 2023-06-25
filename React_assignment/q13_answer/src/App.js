@@ -5,6 +5,7 @@ function App() {
 
   const [userInp,setUserInp]=useState('');
   const[result,setResult]=useState(0);
+ 
   
 
   let operations=["+","-","/","*"];
@@ -55,8 +56,8 @@ function App() {
         <tbody>
            <tr>
               <td><button className="bg-neutral-700 text-white p-6 m-1 text-3xl w-24 rounded-lg hover:bg-stone-400" onClick={()=>clearUserInp("")}>C</button></td>
-              <td><button className="bg-neutral-700 text-white p-6  m-1 text-3xl  w-24 rounded-lg hover:bg-stone-400 " onClick={()=>setUserInp(userInp.slice(0,-1))} >Del</button></td>
-              <td><button className="bg-neutral-700 text-white p-6  m-1 text-3xl  w-24 rounded-lg hover:bg-stone-400 " onClick={()=>getUserInp('%')}>%</button></td>
+              <td colSpan="2"><button className="bg-neutral-700 text-white p-6  m-1 text-3xl  w-11/12 rounded-lg hover:bg-stone-400 " onClick={()=>setUserInp(userInp.slice(0,-1))} >Del</button></td>
+              {/* <td><button className="bg-neutral-700 text-white p-6  m-1 text-3xl  w-24 rounded-lg hover:bg-stone-400 " onClick={()=>getUserInp("%")}>%</button></td> */}
               <td><button className="bg-neutral-700 text-white p-6 m-1 text-3xl  w-24 rounded-lg hover:bg-stone-400" onClick={()=>getUserInp('/')}>/</button></td>
             </tr>
             <tr>
