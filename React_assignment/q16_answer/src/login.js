@@ -19,10 +19,14 @@ function Login(){
             {
               nav("/dashboard",{state:{email:email},});
             }
+            else{
+                alert("Invalid credentials")
+            }
            
         })
-        .then((error)=>{
-            console.log(error);
+        .catch((error)=>{
+            
+            alert("invalid credentials.")
         })
 
     }
