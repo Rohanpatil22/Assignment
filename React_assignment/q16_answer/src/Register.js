@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import axios from 'axios'
-
+import { useNavigate } from "react-router-dom";
 function Register()
 {
     const[email,setEmail]=useState("");
     const[password,setPassword]=useState("");
-
+    const navigate=useNavigate();
    
     const submitData=async ()=>{
    
@@ -15,6 +15,8 @@ function Register()
         const userLogin= await axios.post("https://reqres.in/api/register",crendetials)
         .then((data)=>{
             console.log(data);
+            alert("User succesfully register.");
+            navigate("/");
         })
         .then((error)=>{
             console.log(error);
@@ -24,7 +26,8 @@ function Register()
     return(
         <>
         <div className="w-1/4 text-center m-auto mt-20 border-2 border-slate-200  p-3">
-            <table className="">
+            <div className="text-rose-500 text-xl mb-4">Register new user</div>
+            <table className="m-auto">
                 <tbody>
                 <tr>
                     <td className="p-2">

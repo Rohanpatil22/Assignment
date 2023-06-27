@@ -17,7 +17,7 @@ function Login(){
             console.log(data.data.token);
             if(data.data.token!=undefined && data.data.token!="")
             {
-              nav("/dashboard");
+              nav("/dashboard",{state:{email:email},});
             }
            
         })
@@ -29,7 +29,8 @@ function Login(){
     return(
         <>
         <div className="w-1/4 text-center m-auto mt-20 border-2 border-slate-200  p-3">
-            <table className="">
+        <div className="text-rose-500 text-xl mb-4">Please login </div>
+            <table className="m-auto">
                 <tbody>
                 <tr>
                     <td className="p-2">
